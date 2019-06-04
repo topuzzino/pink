@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-display: swap;
+  src:
+    local("OpenSans"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: bold;
+  font-display: swap;
+  src:
+    local("OpenSans"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("OpenSans"),
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+}
+
+.visually-hidden {
+  .visually-hidden;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  font-family: @font;
+  .font(14px; 1.2);
+}
+
+.yes {
+  background-image: url("../img/icon-yes-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: 93% 50%;
+}
+
+.no {
+  background-image: url("../img/icon-no-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: 93% 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .no,
+  .yes {
+    background-position: 50% 50%;
+  }
+}
+
+
+/*.price__description::after {
+  content: "";
+
+  position: absolute;
+
+  width: 33px;
+  height: 23px;
+
+  top: 22px;
+  left: 50%;
+
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  z-index: 10;
+}
+*/

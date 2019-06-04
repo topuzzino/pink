@@ -1,0 +1,45 @@
+.btn() {
+  .size(100%; 55px);
+  box-sizing: border-box;
+  padding: 15px;
+
+  .font(18px; 18px);
+  font-weight: bold;
+  border: 3px solid @font-color;
+  color: @font-color;
+  border-radius: 30px;
+  background-color: transparent;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.btn-form() {
+  .size(280px; 63px);
+  box-sizing: border-box;
+
+  .font(18px; 30px);
+  font-weight: bold;
+  color: @font-color;
+  background-color: @btn-form;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+
+  &:disabled {
+    color: @font-color;
+    background-color: #e5e5e5;
+  }
+}

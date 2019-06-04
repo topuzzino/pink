@@ -1,0 +1,48 @@
+.visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.font(@font-size, @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.min-size(@width; @height) {
+  width: @width;
+  min-height: @height;
+}
+
+.link() {
+  text-decoration: none;
+}
+
+.ul() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.li() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.back-img() {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}

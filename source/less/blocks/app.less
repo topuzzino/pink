@@ -1,0 +1,167 @@
+.app {
+  background-color: @app-background;
+  overflow: hidden;
+}
+
+.app__wrapper {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  height: 462px;
+
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+.app__container {
+  height: 274px;
+}
+
+.app__description {
+  display: none;
+}
+
+.app__btn {
+  display: block;
+  .link;
+  .btn;
+  font-weight: bold;
+
+  &:hover {
+    color: @important;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.app__intro {
+  margin: 0;
+  width: 233px;
+
+  .font(14px; 24px);
+  font-weight: 300;
+  text-align: center;
+}
+
+.app__info {
+  height: 213px;
+  padding-bottom: 30px;
+  color: @font-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__img-iphone {
+  margin-top: -285px;
+  margin-bottom: 26px;
+  margin-left: -20px;
+}
+
+@media (min-width: @tablet-width) {
+  .app {
+    background-size: cover;
+    background-position: center;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .app__wrapper {
+    .visually-hidden;
+  }
+
+  .app__container {
+    height: 730px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .app__info {
+    width: 300px;
+    padding: 0;
+    height: 415px;
+    margin-bottom: 110px;
+    order: -1;
+
+    z-index: 10;
+  }
+
+  .app__description {
+    display: block;
+    margin: 0;
+    width: 190px;
+
+    .font(40px, 1.2);
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .app__img-iphone {
+    margin: 0;
+
+    position: absolute;
+    right: -40px;
+    top: 185px;
+  }
+
+  .app__intro {
+    width: 300px;
+    .font(18px; 24px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .app__container {
+    height: 853px;
+  }
+
+  .app__info {
+    height: 515px;
+    margin-bottom: 120px;
+  }
+
+  .app__description {
+    display: block;
+    margin: 0;
+    width: 240px;
+
+    .font(50px, 1.2);
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .app__img-iphone {
+    top: 208px;
+    right: -125px;
+
+    margin: 0;
+  }
+
+  .app__btn {
+    .font(21px; 18px)
+  }
+}

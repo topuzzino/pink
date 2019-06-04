@@ -1,0 +1,387 @@
+.photo-upload__form {
+  background-color: @main-bg-color;
+}
+
+.photo-upload__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-upload__img {
+  padding: 20px 0 40px;
+}
+
+.photo-upload__intro-wrapper {
+  margin: 40px auto;
+  margin-top: 21px;
+
+  .font(14px; 30px);
+  color: @nav-color;
+  text-align: center;
+}
+
+.photo-upload__intro {
+  margin: 0;
+}
+
+.photo-upload__btn {
+  .btn;
+  outline: none;
+
+  &--send {
+    margin-bottom: 12px;
+
+    border-color: @important;
+    color: @important;
+
+    &:hover {
+      color: @font-color;
+      background-color: @important;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--esc {
+    margin-bottom: 41px;
+
+    border-color: @nav-color;
+    color: @nav-color;
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: @nav-color;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.photo-upload__items {
+  .ul;
+
+  width: 200px;
+  margin: 0 auto;
+  padding-right: 5px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  position: relative;
+}
+
+.photo-upload__list {
+  .ul;
+  padding-top: 38px;
+}
+
+.photo-upload__nav {
+  width: 100%;
+}
+
+.photo-upload__editor-icon {
+  fill: #b5b9be;
+}
+
+.photo-upload__editor {
+  &:hover .photo-upload__editor-icon {
+    fill: #8d949b;
+  }
+
+  &--active .photo-upload__editor-icon {
+    fill: @important;
+  }
+
+  &--active:hover .photo-upload__editor-icon {
+    fill: @important;
+  }
+}
+
+.photo-upload__line {
+  display: none;
+
+  &--active {
+    display: inline;
+  }
+}
+
+@media (max-width: @tablet-max-width) {
+  .photo-upload__form {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 201px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #dddfe0;
+    }
+  }
+
+  .photo-upload__line--active {
+    content: "";
+
+    position: absolute;
+    bottom: 22px;
+    left: -20px;
+
+    width: 240px;
+    height: 2px;
+
+    background-color: @nav-color;
+  }
+
+  .photo-upload__slider--active {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    right: 30px;
+
+    width: 10px;
+    height: 10px;
+
+
+    border: 2px solid @important;
+    border-radius: 50%;
+    background-color: @important;
+
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo-upload__form {
+    margin-bottom: 13px;
+  }
+
+  .photo-upload__intro-wrapper {
+    margin: 45px auto 70px;
+  }
+
+  .photo-upload__intro {
+    .font(18px; 30px);
+  }
+
+  .photo-upload__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .photo-upload__nav {
+    width: 275px;
+    padding: 65px 0;
+    padding-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .photo-upload__items {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 166px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo-upload__btn--send {
+    margin-bottom: 24px;
+  }
+
+  .photo-upload__btn--esc {
+    margin-bottom: 0;
+  }
+
+  .photo-upload__img {
+    padding: 55px 0;
+  }
+
+  .photo-upload__item {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -23px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #dddfe0;
+    }
+  }
+
+  .photo-upload__line {
+    display: block;
+    margin: 0;
+
+    position: absolute;
+    bottom: 50%;
+    right: 19px;
+
+    width: 202px;
+    height: 2px;
+
+    background-color: #283645;
+  }
+
+  .photo-upload__slider {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 33px;
+
+    width: 10px;
+    height: 10px;
+    background-color: @main-bg-color;
+
+    border: 2px solid @important;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &--cut {
+      right: 42px;
+    }
+
+    &--pour {
+      right: 163px;
+    }
+
+    &--bright {
+      right: 92px;
+    }
+
+    &--active {
+      background-color: @important;
+    }
+
+    &:active {
+      background-color: @important;
+    }
+  }
+
+  .photo-upload__general-slider {
+    display: none;
+  }
+
+  .photo-upload__list {
+    width: 260px;
+  }
+
+  .photo-upload__editor-icon {
+    width: 24px;
+    height: 24px;
+    padding-left: 5px;
+
+    &--size {
+      width: 17px;
+      height: 17px;
+      padding-top: 0;
+      padding-left: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-upload__form {
+    background-color: transparent;
+    margin-bottom: 35px;
+  }
+
+  .photo-upload__wrapper {
+    background-color: @main-bg-color;
+    padding: 0 60px 0 80px;
+  }
+
+  .photo-upload__nav {
+    width: 410px;
+    padding: 50px 0 58px;
+  }
+
+  .photo-upload__items {
+    height: 188px;
+  }
+
+  .photo-upload__list {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .photo-upload__btn {
+    .size(183px; 55px);
+
+    &--send {
+      margin-bottom: 0;
+    }
+  }
+
+  .photo-upload__item {
+    &::after {
+      bottom: -10px;
+      left: 0;
+
+      width: 100%;
+    }
+  }
+
+  .photo-upload__line {
+    width: 288px;
+    right: 28px;
+  }
+
+  .photo-upload__slider {
+    &--cut {
+      right: 203px;
+    }
+
+    &--pour {
+      right: 27px;
+    }
+
+    &--bright {
+      right: 114px;
+    }
+  }
+
+  .photo-upload__intro-wrapper {
+    margin-top: 5px;
+    margin-bottom: 67px;
+  }
+
+  .photo-upload__editor-icon {
+    width: 48px;
+    height: 48px;
+    padding-left: 0;
+
+    &--size {
+      width: 34px;
+      height: 34px;
+      padding-left: 5px;
+    }
+  }
+}
